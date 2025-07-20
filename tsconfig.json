@@ -5,7 +5,8 @@
     { "path": "./tsconfig.node.json" }  // Node 脚本配置（如 vite.config.ts）
   ],
    "compilerOptions": {
-    "moduleResolution": "Node", // 确保使用 Node 模块解析策略
+    "types": ["vue-router"],
+    "moduleResolution": "node", // 确保使用 Node 模块解析策略
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"] // 如果项目使用 @ 别名，确保配置正确
