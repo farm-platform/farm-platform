@@ -1,16 +1,16 @@
 <template>
   <div>
-    <!-- 保留原来的欢迎部分 -->
+    <!-- 欢迎部分 -->
     <div class="welcome">
       <a href="https://vite.dev" target="_blank">
         <img src="/vite.svg" class="logo" alt="Vite logo" />
       </a>
       <a href="https://vuejs.org/" target="_blank">
-        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+        <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
     
-    <!-- 合并路由导航部分 -->
+    <!-- 导航菜单 -->
     <div class="navigation">
       <router-link to="/fields">Fields</router-link>
       <router-link to="/predict">Predict</router-link>
@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-// 相关逻辑（如果有需要添加的）
+// 无需导入 SVG（public 目录资源直接通过路径引用）
 </script>
 
 <style scoped>
@@ -41,20 +41,29 @@
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 
-/* 新增导航样式 */
+/* 导航样式 */
 .navigation {
   margin: 2em 0;
+  padding: 1em;
+  background-color: #f8f9fa;
+  border-radius: 8px;
 }
 
 .navigation router-link {
-  margin-right: 1em;
+  margin-right: 1.5em;
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  padding: 0.5em 0;
+  transition: color 0.2s;
 }
 
 .navigation router-link.router-link-exact-active {
   color: #42b883;
   border-bottom: 2px solid #42b883;
+}
+
+.navigation router-link:hover:not(.router-link-exact-active) {
+  color: #646cff;
 }
 </style>
