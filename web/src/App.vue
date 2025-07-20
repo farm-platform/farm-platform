@@ -6,7 +6,8 @@
         <img src="/vite.svg" class="logo" alt="Vite logo" />
       </a>
       <a href="https://vuejs.org/" target="_blank">
-        <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo" />
+        <!-- 使用相对路径（直接指向 src/assets 目录，无需依赖 @ 别名） -->
+        <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
     
@@ -24,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-// 无需导入 SVG（public 目录资源直接通过路径引用）
+// 无需导入 SVG，直接在模板中使用相对路径
 </script>
 
 <style scoped>

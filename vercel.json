@@ -12,5 +12,12 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/web/dist/$1" } 
-  ]
+  ],
+
+  
+  "build": {
+    "env": {
+      "NPM_CONFIG_INCLUDE_DEV": "true"
+    } 
+  }
 }
