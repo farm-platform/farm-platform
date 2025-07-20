@@ -1,0 +1,36 @@
+# ========= 前端部分 =========
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========= 后端部分 =========
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.python-version
+
+# 环境变量
+.env
+.env.local
+.env*.local
+
+# ========= 编辑器/系统 =========
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
