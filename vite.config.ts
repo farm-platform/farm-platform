@@ -1,17 +1,14 @@
+// 顶部添加类型引用
+/// <reference types="vite/client" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
+import { fileURLToPath } from 'node:url'  // 使用现代 Node.js 的 URL 模块
 
 export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      // 强制指定绝对路径（确保路径正确）
-      '@': path.resolve(__dirname, 'web/src')
+      '@': fileURLToPath(new URL('./src', import.meta.url))  // 安全的路径别名写法
     }
-  },
-  server: {
-    port: 5173, // 确保端口一致
-    strictPort: true // 端口被占用时直接失败，避免混淆
   }
 })
