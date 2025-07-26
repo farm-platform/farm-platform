@@ -12,4 +12,5 @@ npx vue-tsc --version
 echo "===== 执行构建 ====="
 npm run build
 
+
 echo "===== 构建完成 ====="
