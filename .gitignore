@@ -1,36 +1,19 @@
-# ========= 前端部分 =========
+# 忽略所有不需要提交的文件
+*
+!web/
+!backend/
+
+# 保留 web 目录下的必要文件
+!web/package.json
+!web/clean.js
+!web/vite.config.ts
+!web/src/
+!web/public/
+
+# 忽略通用文件
 node_modules/
+.cache/
 dist/
-dist-ssr/
-*.local
-
-# 日志文件
+build/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# ========= 后端部分 =========
-# Python
-__pycache__/
-*.py[cod]
-venv/
-.venv/
-.python-version
-
-# 环境变量
-.env
-.env.local
-.env*.local
-
-# ========= 编辑器/系统 =========
-.vscode/
-!.vscode/extensions.json
-.idea/
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+*.tmp
