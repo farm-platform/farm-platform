@@ -1,20 +1,10 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json", // 依赖已装，恢复继承
-  "include": ["src/**/*.ts", "src/**/*.vue", "src/env.d.ts"],
-  "exclude": ["node_modules"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["web/src/**/*.ts", "web/src/**/*.vue", "web/src/env.d.ts"],
   "compilerOptions": {
-    "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "types": ["vite/client"],
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "declaration": true // 必须为 true，因为 composite: true 时不能禁用声明发出
+      "@/*": ["web/src/*"] // 与 Vite 别名保持绝对一致
+    }
   }
 }

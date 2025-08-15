@@ -1,11 +1,11 @@
 // router/index.ts
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Fields from '../views/Fields.vue';
 import Predict from '../views/Predict.vue';
 import Logistics from '../views/Logistics.vue';
 import Alert from '../views/Alert.vue';
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: '/',
     redirect: '/fields'
