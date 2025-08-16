@@ -1,5 +1,5 @@
 {
-  "build": {
-    "command": "npm run build"
-  }
+  "buildCommand": "npm run build",  // 正确：直接在顶层配置 buildCommand
+  "outputDirectory": "dist",       // 构建输出目录（根据你的项目填写）
+  "installCommand": "npm install"   // 可选：自定义安装命令
 }
